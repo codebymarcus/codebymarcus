@@ -1,0 +1,34 @@
+version: "3.8"
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - 10.10.10.60:27017:27017
+    volumes:
+      - mongo-data:/data/db
+    restart: unless-stopped
+
+  services:
+    image: codebymarcus-services:latest
+    container_name: codebymarcus-services
+    ports:
+      - 10.10.10.60:3030:3030
+    depends_on:
+      - mongodb
+    volumes:
+      - ./files:/files
+
+  admin:
+    image: codebymarcus-admin:latest
+    container_name: codebymarcus-admin
+    ports:
+      - 10.10.10:60:9000:9000
+    depends_on:
+      - services
+    volumes:
+      - ./admin:/app
+
+volumes:
+  mongo-data:
+    driver: local

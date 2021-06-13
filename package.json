@@ -1,0 +1,15 @@
+{
+  "name": "codebymarcus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "dc up -d",
+    "stop": "dc down",
+    "stop:clean": "dc down --volumes --remove-orphans"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
