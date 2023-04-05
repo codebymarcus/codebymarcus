@@ -1,3 +1,4 @@
+<a href="https://app.daily.dev/awesomemarcus"><img src="https://api.daily.dev/devcards/ed8eccb1a8fd4bdd927060576c6a0b05.png?r=bb3" width="400" alt="Marcus' Dev Card"/></a>
 ### Hi there 👋
 
 <!--
